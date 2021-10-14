@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Library</title>
+
+    <style>
+        #allBooks {
+            display: block;
+            max-height: 320px;
+            overflow-y: scroll;
+        }
+
+        thead,
+        tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            /* even columns width , fix width of table too*/
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Library</a>
+
+            <form class="d-flex">
+                <input class="form-control me-2" id="search_book" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit">Search</button>
+            </form>
+
+        </div>
+    </nav>
+
+    <!-- Displaying messages -->
+    <div class="messages"></div>
+
+
+    <div class="container">
+        <!-- add Book section -->
+        <div class="library-addBook mx-auto" style="width: 40rem;">
+            <div class="page-title mt-3">
+                <p class="fs-3">Add New Book In Library</p>
+            </div>
+            <hr>
+            <form action="" id="libraryForm">
+                <div class="my-3" id="addBook">
+                    <label for="bookName" class="form-label">Book Name</label>
+                    <input type="text" class="form-control" id="bookName" placeholder="Enter Book Name..">
+
+                    <label for="author" class="form-label">Author</label>
+                    <input type="text" class="form-control" id="author" placeholder="Enter Author Name..">
+
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="radio" name="language" id="language1" value="Hindi"
+                            checked>
+                        <label class="form-check-label" for="language1">Hindi</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="language" id="language2" value="English">
+                        <label class="form-check-label" for="language2">English</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning" id="addbtn">Add Book</button>
+            </form>
+        </div>
+
+
+        <h2 class="mt-3">Availabe Books</h2>
+        <hr>
+        <!-- Displaying book section -->
+        <div class="container-fluid">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Book Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Language</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="allBooks"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom  javascript for library -->
+    <script src="library_using_prototype.js"></script>
+    <!-- <script src="library_using_class.js"></script> -->
+
+</body>
+
+</html>
