@@ -12,3 +12,6 @@ It is word dictionary, you can search your word using this tool. All searched wo
 
 ## 4 - Form Validation
 In the form validation project, all form fields is validated at the client side.
+
+## 5 - News Portal
+In this news portal, all the news is coming from "https://newsapi.org/" website
